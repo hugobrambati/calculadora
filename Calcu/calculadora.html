@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fundo{
+            background-image: radial-gradient(circle at 12.5% 12.5%, #0086ff 0, #4d7fff 3.85%, #7a77ff 7.69%, #9a6efa 11.54%, #b364ee 15.38%, #c859e0 19.23%, #d94fd1 23.08%, #e644c0 26.92%, #f13aaf 30.77%, #f9319e 34.62%, #fe2c8c 38.46%, #ff2c7b 42.31%, #ff3069 46.15%, #ff3858 50%, #fb4147 53.85%, #f54c36 57.69%, #ed5624 61.54%, #e4600c 65.38%, #d96900 69.23%, #cd7100 73.08%, #c07900 76.92%, #b28000 80.77%, #a38600 84.62%, #948c00 88.46%, #839100 92.31%, #709500 96.15%, #5c9900 100%);
+            height: 100vh;
+            color: #000;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+        }
+        
+
+        
+        .calculadora{
+            position: absolute;
+            background-color: rgb(127, 255, 212,0.3);
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            border-radius: 15px;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        .botao{
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            background: #33CCFF;
+            border: none;
+            border-radius: 50px;
+            margin: 3px;
+
+        }
+
+        .botao:hover{
+            background-color: #48c09e;
+        }
+
+        #resultado{
+            background-color: #fff;
+            width: 215px;
+            height: 30px;
+            margin: 5px;
+            font-size: 25px;
+            text-align: right;
+            padding: 5px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">
+        <h1>Hugo Brambati</h1>
+        <div class="calculadora">
+            <h2>Calculadora</h2>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td><button class="botao" onclick="clean('')">C</button></td>
+                    <td><button class="botao" onclick="back('')"><</button></td>
+                    <td><button class="botao" onclick = "insert('/')" >/</button></td>
+                    <td><button class="botao" onclick = "insert('*')">X</button>
+                </tr>
+                
+                <tr>
+                    <td><button class="botao" onclick = "insert('7')">7</button></td>
+                    <td><button class="botao" onclick = "insert('8')">8</button></td>
+                    <td><button class="botao" onclick = "insert('9')">9</button></td>
+                    <td><button class="botao" onclick = "insert('-')">-</button>
+                </tr>
+
+                <tr>
+                    <td><button class="botao" onclick = "insert('4')">4</button></td>
+                    <td><button class="botao" onclick = "insert('5')">5</button></td>
+                    <td><button class="botao" onclick = "insert('6')">6</button></td>
+                    <td><button class="botao" onclick = "insert('+')">+</button>
+                </tr>
+
+                <tr>
+                    <td><button class="botao" onclick = "insert('1')">1</button></td>
+                    <td><button class="botao" onclick = "insert('2')">2</button></td>
+                    <td><button class="botao" onclick = "insert('3')">3</button></td>
+                    <td rowspan="2"><button class="botao" style="height:106px;" onclick="calcular('')">=</button>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><button class="botao" style="width:106px;" onclick="insert('0')">0</button></td>
+                    <td><button class="botao" onclick="insert ('.')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>   
+</body>
+</html>
