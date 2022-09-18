@@ -1,2 +1,2 @@
 # calculadora
- repositorio versionado
+ Calculadora simple feita com HTML, CSS e JavaScript.
